@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Projeto CrossPlatform</title>
+
+        <script type="text/javascript" src="js/libs/jquery-3.4.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        
+
+    </head>
+    <body class="bg-primary">
+
+      
+
+      
+            <div class="container-fluid page page-active" id="inicio">
+                    <div class="row">
+                        <div class="col-md-5 mx-auto">
+                        <div id="first">
+                            <div class="myform form ">
+                                 <div class="logo mb-3">
+                                     <div class="col-md-12 text-center">
+                                        <h1>Login</h1>
+                                     </div>
+                                </div>
+                               <form action="" method="post" name="login">
+                                       <div class="form-group">
+                                          <label for="exampleInputEmail1">E-mail</label>
+                                          <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite seu e-mail">
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="exampleInputEmail1">Senha</label>
+                                          <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Digite sua Senha">
+                                       </div>
+                                       </br>
+                                       <div class="col-md-12 text-center ">
+                                          <button onclick="validate()" type="submit"  class=" btn btn-block mybtn btn-primary tx-tfm targetPage" dt-page="#content">Entrar</button>
+                                       </div>
+                                    </br>
+                                       <div class="col-md-12 ">
+                                          <div class="login-or">
+                                             <hr class="hr-or">
+                                             <span class="span-or">ou</span>
+                                          </div>
+                                       </div>
+                                       
+                                       <div class="form-group">
+                                          <p class="text-center">Não tem uma conta? <a  href="#" id="signup">Cadastre-se Aqui</a></p>
+                                       </div>
+                                    </form>
+                             
+                            </div>
+                        </div>
+                          <div id="second">
+                              <div class="myform form ">
+                                    <div class="logo mb-3">
+                                       <div class="col-md-12 text-center">
+                                          <h1 >Cadastro</h1>
+                                       </div>
+                                    </div>
+                                    <form action="#" name="registration">
+                                       <div class="form-group">
+                                          <label for="exampleInputEmail1">Nome</label>
+                                          <input type="text"  name="firstname" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Digite seu Nome">
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="exampleInputEmail1">Sobrenome</label>
+                                          <input type="text"  name="lastname" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Digite seu Sobrenome">
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="exampleInputEmail1">E-mail</label>
+                                          <input type="email" name="email"  class="form-control" id="emailregister" aria-describedby="emailHelp" placeholder="Digite seu e-mail">
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="exampleInputEmail1">Senha</label>
+                                          <input type="password" name="password" id="passwordregister"  class="form-control" aria-describedby="emailHelp" placeholder="Digite uma Senha">
+                                       </div>
+                                       <div class="col-md-12 text-center mb-3">
+                                          <button onclick="register()" type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Começar</button>
+                                       </div>
+                                       <div class="col-md-12 ">
+                                          <div class="form-group">
+                                             <p class="text-center"><a href="#" id="signin">Já possui uma conta?</a></p>
+                                          </div>
+                                       </div>
+                                        </div>
+                                    </form>
+                                 </div>
+                        </div>
+                    </div>
+                  </div>   
+
+                  <div class="container-fluid mt-2 bg-white page" id="content">
+                     
+                  </div>
+
+                 
+
+
+        
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/custom.js"></script>
+        <script type="text/javascript" src="js/firebase.js"></script>
+        
+        
+           <script  src="js/libs/bootstrap.min.js"></script>
+        
+         <!-- The core Firebase JS SDK is always required and must be listed first -->
+         <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+         <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+
+         <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#config-web-app -->
+
+         <script>
+         // Your web app's Firebase configuration
+         var firebaseConfig = {
+            apiKey: "AIzaSyCzq3LDjM-fhLgLEqnJ_ffSDrSZZWY8Gt4",
+            authDomain: "news-d4ac3.firebaseapp.com",
+            databaseURL: "https://news-d4ac3.firebaseio.com",
+            projectId: "news-d4ac3",
+            storageBucket: "news-d4ac3.appspot.com",
+            messagingSenderId: "419130403383",
+            appId: "1:419130403383:web:0b6eade8c5d6d4d3"
+         };
+         // Initialize Firebase
+         firebase.initializeApp(firebaseConfig);
+         </script>
+         
+        
+    </body>
+</html>
