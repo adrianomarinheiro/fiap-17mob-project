@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Perfil</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Altere seu Perfil</h1>
+        <hr>
+        <img src="img/img_avatar.png" alt="Avatar" class="avatar" id="img-user">
+
+        <label for="nome"><b>Nome Completo</b></label>
+        <input type="text" placeholder="Digite seu Nome completo" name="nome" id="nomePerfil" required>
+
+        <br><br>
+        <div class="clearfix">
+            <button onclick="btmAtualizarFoto()">Atualizar Foto</button>
+            <br><br>
+            <hr>
+            <br>
+            <button onclick="btmVoltarHome()" class="signupbtn">Voltar</button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/cadastro.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+    <script type="text/javascript" src="js/firebase.js"></script>
+    <script type="text/javascript" src="js/perfil.js"></script>
+    <script type="text/javascript" src="js/noticias.js"></script>
+</body>
+
+</html>
